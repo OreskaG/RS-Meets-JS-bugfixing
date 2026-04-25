@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Задание 1 — Счётчик кликов</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐞</text></svg>">
+  <link rel="stylesheet" href="../header.css">
+  <link rel="stylesheet" href="../hint.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <a href="../index.html" class="nav-logo">RS Meets 🐞 JS</a>
+      <ul class="nav-links">
+        <li><a href="../index.html">Главная</a></li>
+        <li><a href="../1/index.html">Задание 1</a></li>
+        <li><a href="../2/index.html">Задание 2</a></li>
+        <li><a href="../3/index.html">Задание 3</a></li>
+        <li><a href="../4/index.html">Задание 4</a></li>
+        <li><a href="../5/index.html">Задание 5</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="counter-app">
+    <h1>Счётчик кликов</h1>
+    <p class="counter-status" id="status">Нажми «+», чтобы начать считать</p>
+    <div class="counter-value" id="counter">0</div>
+    <div class="counter-buttons">
+      <button id="decrement">−</button>
+      <button id="reset">Сброс</button>
+      <button id="increment">+</button>
+    </div>
+    <p class="counter-hint">Когда счётчик достигнет 10, должно появиться поздравление 🎉</p>
+  </main>
+
+  <div class="hint-bug">
+    <div class="hint-bug-icon">🐞</div>
+    <div class="hint-bug-tooltip">
+      <h3>Баги на этой странице (5):</h3>
+      <ol>
+        <li>Кнопка «+» не увеличивает счётчик — должна прибавлять 1 при каждом клике.</li>
+        <li>Кнопка «−» вообще не реагирует на клик — должна уменьшать счётчик на 1.</li>
+        <li>Кнопка «Сброс» вместо обнуления делает что-то странное — должна возвращать счётчик к 0.</li>
+        <li>Поздравление при значении 10 не появляется — статус должен меняться на «🎉 Поздравляем, вы достигли 10!».</li>
+        <li>Счётчик может уходить в отрицательные числа — он должен останавливаться на 0 и не идти ниже.</li>
+      </ol>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>Создано для <a href="https://rs.school" target="_blank">RS School</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
