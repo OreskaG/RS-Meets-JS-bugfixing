@@ -1,9 +1,10 @@
 const slides = [
-  { src: 'https://placehold.co/700x400/0f3460/ffcc00?text=Mountains', caption: 'Горы на рассвете' },
-  { src: 'https://placehold.co/700x400/16213e/ffcc00?text=Forest', caption: 'Утро в лесу' },
-  { src: 'https://placehold.co/700x400/1a1a2e/ffcc00?text=Ocean', caption: 'Океанский берег' },
-  { src: 'https://placehold.co/700x400/0f3460/ff6b6b?text=Desert', caption: 'Закат в пустыне' },
-  { src: 'https://placehold.co/700x400/16213e/4ecdc4?text=City', caption: 'Городские огни' }
+  { src: 'assets/4-Desert.jpeg', caption: 'Закат в пустыне' },
+  { src: 'assets/4-Forest.webp', caption: 'Утро в лесу' },
+  { src: 'assets/4-Hills.webp', caption: 'Холмы в тумане' },
+  { src: 'assets/4-Ocean.jpg', caption: 'Океанский берег' },
+  { src: 'assets/4-Spring.jpg', caption: 'Весенний сад' },
+  { src: 'assets/4-sunset.jpg', caption: 'Закат над горизонтом' }
 ];
 
 const mainImg = document.getElementById('main-img');
