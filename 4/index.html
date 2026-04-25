@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Задание 4 — Галерея со слайдером</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐞</text></svg>">
+  <link rel="stylesheet" href="../header.css">
+  <link rel="stylesheet" href="../hint.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <a href="../index.html" class="nav-logo">RS Meets 🐞 JS</a>
+      <ul class="nav-links">
+        <li><a href="../index.html">Главная</a></li>
+        <li><a href="../1/index.html">Задание 1</a></li>
+        <li><a href="../2/index.html">Задание 2</a></li>
+        <li><a href="../3/index.html">Задание 3</a></li>
+        <li><a href="../4/index.html">Задание 4</a></li>
+        <li><a href="../5/index.html">Задание 5</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="gallery-app">
+    <h1>Галерея со слайдером</h1>
+    <p class="subtitle">Стрелки переключают изображения. Миниатюры открывают конкретный слайд.</p>
+
+    <div class="slider">
+      <button class="arrow arrow-left" id="prev">‹</button>
+      <img id="main-img" src="https://placehold.co/700x400/16213e/ffcc00?text=Loading" alt="Slide" />
+      <button class="arrow arrow-right" id="next">›</button>
+    </div>
+
+    <p class="caption" id="caption">—</p>
+
+    <div class="thumbnails" id="thumbs"></div>
+  </main>
+
+  <div class="hint-bug">
+    <div class="hint-bug-icon">🐞</div>
+    <div class="hint-bug-tooltip">
+      <h3>Баги на этой странице (5):</h3>
+      <ol>
+        <li>При первой загрузке нет картинки и подписи — должна сразу отображаться первая фотография.</li>
+        <li>Кнопка «вправо» после последнего слайда показывает пустоту вместо возврата к первому (зацикливания нет).</li>
+        <li>Кнопка «влево» с первого слайда тоже ломается, вместо перехода к последнему.</li>
+        <li>Клик по любой миниатюре всегда показывает одну и ту же (последнюю) картинку — классическая проблема замыкания в цикле.</li>
+        <li>Активная миниатюра не подсвечивается жёлтой рамкой (класс <code>active</code> не переключается при смене слайда).</li>
+      </ol>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>Создано для <a href="https://rs.school" target="_blank">RS School</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
