@@ -27,7 +27,7 @@ function update() {
     matchCategory && matchSearch;
   });
 
-  if (sortMode === 'asc') {
+  if (sortMode === 'asc1') {
     result = products.sort(function (a, b) { return a.price - b.price; });
   } else if (sortMode === 'desc') {
     result = products.sort(function (a, b) { return b.price - a.price; });
