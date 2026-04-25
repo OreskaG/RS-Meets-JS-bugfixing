@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Задание 2 — Калькулятор чаевых</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐞</text></svg>">
+  <link rel="stylesheet" href="../header.css">
+  <link rel="stylesheet" href="../hint.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <a href="../index.html" class="nav-logo">RS Meets 🐞 JS</a>
+      <ul class="nav-links">
+        <li><a href="../index.html">Главная</a></li>
+        <li><a href="../1/index.html">Задание 1</a></li>
+        <li><a href="../2/index.html">Задание 2</a></li>
+        <li><a href="../3/index.html">Задание 3</a></li>
+        <li><a href="../4/index.html">Задание 4</a></li>
+        <li><a href="../5/index.html">Задание 5</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="tip-app">
+    <h1>Калькулятор чаевых</h1>
+    <p class="subtitle">Введи сумму счёта, процент чаевых и количество людей.</p>
+
+    <form class="tip-form" id="form">
+      <label>
+        Сумма счёта (₽):
+        <input type="number" id="bill" placeholder="например, 1500" />
+      </label>
+      <label>
+        Процент чаевых (%):
+        <input type="number" id="tip" placeholder="например, 10" />
+      </label>
+      <label>
+        Количество людей:
+        <input type="number" id="people" placeholder="например, 3" />
+      </label>
+      <button type="button" id="calc">Посчитать</button>
+    </form>
+
+    <div class="tip-result" id="result">
+      <p>Заполни поля и нажми «Посчитать».</p>
+    </div>
+  </main>
+
+  <div class="hint-bug">
+    <div class="hint-bug-icon">🐞</div>
+    <div class="hint-bug-tooltip">
+      <h3>Баги на этой странице (5):</h3>
+      <ol>
+        <li>Кнопка «Посчитать» вообще не запускает расчёт — обработчик навешен не на ту кнопку.</li>
+        <li>Введённые числа склеиваются как строки (1500 + 10 = «150010»). Должна работать арифметика.</li>
+        <li>Сумма чаевых получается в 100 раз больше нужного — забыто деление процента на 100.</li>
+        <li>При пустых полях результат выводит «NaN» — должно появляться сообщение «Заполните все поля корректно».</li>
+        <li>Итог «на человека» считает неверно: делит на сумму чаевых, а не на количество людей.</li>
+      </ol>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>Создано для <a href="https://rs.school" target="_blank">RS School</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
