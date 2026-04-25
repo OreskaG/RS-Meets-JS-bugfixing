@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Задание 5 — Каталог товаров</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐞</text></svg>">
+  <link rel="stylesheet" href="../header.css">
+  <link rel="stylesheet" href="../hint.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <a href="../index.html" class="nav-logo">RS Meets 🐞 JS</a>
+      <ul class="nav-links">
+        <li><a href="../index.html">Главная</a></li>
+        <li><a href="../1/index.html">Задание 1</a></li>
+        <li><a href="../2/index.html">Задание 2</a></li>
+        <li><a href="../3/index.html">Задание 3</a></li>
+        <li><a href="../4/index.html">Задание 4</a></li>
+        <li><a href="../5/index.html">Задание 5</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="catalog-app">
+    <h1>Каталог товаров</h1>
+    <p class="subtitle">Фильтруй по категории, ищи по названию, сортируй по цене.</p>
+
+    <div class="catalog-controls">
+      <input type="text" id="search" placeholder="Поиск по названию..." />
+      <select id="category">
+        <option value="all">Все категории</option>
+        <option value="phone">Телефоны</option>
+        <option value="laptop">Ноутбуки</option>
+        <option value="audio">Аудио</option>
+      </select>
+      <select id="sort">
+        <option value="default">По умолчанию</option>
+        <option value="asc">Цена ↑</option>
+        <option value="desc">Цена ↓</option>
+      </select>
+    </div>
+
+    <p class="catalog-found" id="found">Найдено: 0</p>
+
+    <ul class="catalog-list" id="list"></ul>
+  </main>
+
+  <div class="hint-bug">
+    <div class="hint-bug-icon">🐞</div>
+    <div class="hint-bug-tooltip">
+      <h3>Баги на этой странице (5):</h3>
+      <ol>
+        <li>Список товаров пустой при любой категории — функция фильтрации возвращает <code>undefined</code>.</li>
+        <li>Поиск работает только если ввести точно с теми же буквами в верхнем/нижнем регистре. Должен быть регистронезависимым.</li>
+        <li>После сортировки «Цена ↓» опция «По умолчанию» больше не возвращает исходный порядок — массив товаров мутируется.</li>
+        <li>При смене фильтров старые карточки остаются на странице, новые добавляются снизу — список дублируется.</li>
+        <li>Счётчик «Найдено: N» всегда показывает общее количество товаров, а не количество отфильтрованных.</li>
+      </ol>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>Создано для <a href="https://rs.school" target="_blank">RS School</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
