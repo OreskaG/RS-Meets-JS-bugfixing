@@ -23,9 +23,9 @@ const tipAmount = NaN * 10;  // NaN
 ```js
 // ✅ Исправление
 function calculate() {
-  const bill = parseFloat(billInput.value);
-  const tipPercent = parseFloat(tipInput.value);
-  const people = parseInt(peopleInput.value);
+  const bill = Number(billInput.value);
+  const tipPercent = Number(tipInput.value);
+  const people = Number(peopleInput.value);
 
   if (isNaN(bill) || isNaN(tipPercent) || isNaN(people) || people === 0) {
     resultEl.innerHTML = '<p>Заполните все поля корректно</p>';
